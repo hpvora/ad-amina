@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Link, useNavigate} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import {APP_VERSION, BASE_URL, URL_PATH} from "../Configration/configration";
 import {toast} from "react-toastify";
 import {Modal} from "react-bootstrap";
@@ -37,19 +37,19 @@ const OPTIONS = [
     },
     {
         name: "My Events",
-        route: "/"
+        route: "/my_events"
     },
     {
         name: "My Page",
-        route: "/my-pages"
+        route: "/my_page"
     },
     {
         name: "My Schedule",
-        route: "/"
+        route: "/my_schedule"
     },
     {
         name: "Save",
-        route: "/"
+        route: "/save"
     },
 ]
 
@@ -62,6 +62,8 @@ const Header = () => {
         }
         dispatch(getUserDetails(userAuth?._id));
     }, []);
+
+    const location = useLocation()
 
     const dispatch = useDispatch();
 
@@ -178,7 +180,7 @@ const Header = () => {
                                     {
                                         OPTIONS.map((opt, i) => (
                                             <React.Fragment key={i}>
-                                                <li onClick={() => navigate(opt.route)}>{opt.name}</li>
+                                                <li className={opt.route == location.pathname ? 'active' : ''} onClick={() => navigate(opt.route)}>{opt.name}</li>
                                             </React.Fragment>
                                         ))
                                     }

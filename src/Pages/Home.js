@@ -341,7 +341,10 @@ const Home = () => {
                     {userServiceList.map((data, index) => {
                       return (
                         <>
-                          <div className="w-100 p-2" key={`key _${index}`}>
+                          <div
+                            className="w-100 p-2 position-relative"
+                            key={`key _${index}`}
+                          >
                             <Link
                               to={`/provider_details/${data?.user_id?._id}`}
                             >
@@ -355,26 +358,10 @@ const Home = () => {
                                   </div>
                                   <div className="w-100">
                                     <h4
-                                      class="mb-1 d-flex justify-content-between"
+                                      class="mb-1"
                                       style={{ fontSize: "18px" }}
                                     >
                                       {data?.service_name}
-                                      <img
-                                        src={
-                                          data?.is_save
-                                            ? "images/save.svg"
-                                            : "images/saveIcon.svg"
-                                        }
-                                        height="26px"
-                                        onClick={() => {
-                                          if (data?.is_save) {
-                                            saveProvider(data?._id, false);
-                                          } else {
-                                            saveProvider(data?._id, true);
-                                          }
-                                        }}
-                                        style={{ cursor: "pointer" }}
-                                      />
                                     </h4>
                                     <p
                                       class="mb-0"
@@ -441,6 +428,27 @@ const Home = () => {
                                 </div>
                               </div>
                             </Link>
+                            <img
+                              className="position-absolute"
+                              src={
+                                data?.is_save
+                                  ? "images/save.svg"
+                                  : "images/saveIcon.svg"
+                              }
+                              height="26px"
+                              onClick={() => {
+                                if (data?.is_save) {
+                                  saveProvider(data?._id, false);
+                                } else {
+                                  saveProvider(data?._id, true);
+                                }
+                              }}
+                              style={{
+                                cursor: "pointer",
+                                top: "20px",
+                                right: "20px",
+                              }}
+                            />
                           </div>
                         </>
                       );
