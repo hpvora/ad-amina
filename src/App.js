@@ -17,32 +17,35 @@ import "./assets/css/bootstrap.min.css"
 import "./assets/css/custom.css"
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle"
 import MyPages from "./Pages/MyPages";
+import Booking from "./Pages/Booking";
+import SessionBooking from "./Component/SessionBooking";
 
 function App() {
-  const authDetails = useSelector((state) => state.auth);
-  return (
-    <>
-      {authDetails !== null && authDetails?.token ? (
-        //after login route
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<UserProfile />} />
-          <Route path="/privacy_policy" element={<PrivacyPolicy />} />
-          <Route path="/terms_and_condition" element={<TermsAndCondition />} />
-          <Route path="/provider_details/:providerId" element={<ProviderDetailsPage />} />
-          <Route path="/my_page" element={<MyPages />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-      ) : (
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/forgot_password" element={<ForgetPassword />} />
-          <Route path="/privacy_policy" element={<PrivacyPolicy />} />
-          <Route path="/terms_and_condition" element={<TermsAndCondition />} />
-          <Route path="/provider_details/:providerId" element={<ProviderDetailsPage />} />
-          <Route path="*" element={<Navigate to="/login" />} />
-        </Routes>
-      )}
+    const authDetails = useSelector((state) => state.auth);
+    return (
+        <>
+            {authDetails !== null && authDetails?.token ? (
+                <Routes>
+                    <Route path="/" element={<Home/>}/>
+                    <Route path="/profile" element={<UserProfile/>}/>
+                    <Route path="/my_page" element={<MyPages/>}/>
+                    <Route path="/booking" element={<Booking/>}/>
+                    <Route path="/book-session" element={<SessionBooking/>}/>
+                    <Route path="/privacy_policy" element={<PrivacyPolicy/>}/>
+                    <Route path="/terms_and_condition" element={<TermsAndCondition/>}/>
+                    <Route path="/provider_details/:providerId" element={<ProviderDetailsPage/>}/>
+                    <Route path="*" element={<Navigate to="/"/>}/>
+                </Routes>
+            ) : (
+                <Routes>
+                    <Route path="/login" element={<Login/>}/>
+                    <Route path="/forgot_password" element={<ForgetPassword/>}/>
+                    <Route path="/privacy_policy" element={<PrivacyPolicy/>}/>
+                    <Route path="/terms_and_condition" element={<TermsAndCondition/>}/>
+                    <Route path="/provider_details/:providerId" element={<ProviderDetailsPage/>}/>
+                    <Route path="*" element={<Navigate to="/login"/>}/>
+                </Routes>
+            )}
 
       <ToastContainer
         position="top-right"

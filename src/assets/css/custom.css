@@ -1953,6 +1953,7 @@ footer:after {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 325px;
+    cursor: pointer;
 }
 
 .pro_carousel_content {
@@ -1969,11 +1970,13 @@ footer:after {
     font-size: 14px;
     text-align: center;
 }
-.pro_carousel_title{
+
+.pro_carousel_title {
     font-size: 16px;
     font-weight: 600;
 }
-.pro_carousel_time{
+
+.pro_carousel_time {
     text-align: center;
     font-size: 13px;
     font-weight: 500;
@@ -1988,12 +1991,14 @@ footer:after {
 .yellow_border {
     border: 2px solid #FFA500;
 }
-.card_green_arrow{
+
+.card_green_arrow {
     position: absolute;
     top: 10px;
     right: 10px;
 }
-.massageBtn{
+
+.massageBtn {
     background-image: url("../images/massage_btn.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -2001,4 +2006,30 @@ footer:after {
     width: 100%;
     height: 40px;
     margin-top: 15px;
+}
+
+/*.......session booking.....*/
+
+.session-select .ant-select-selector {
+    width: 100% !important;
+    font-size: 17px !important;
+    height: 44px !important;
+    padding: 4px 10px !important;
+    font-weight: 700 !important;
+}
+
+.session-input {
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.session-input input {
+    border: none;
+    margin-left: auto;
+    outline: none;
+}
+
+.session-address {
+    border: 1px dashed black;
 }

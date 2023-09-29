@@ -10,8 +10,10 @@ import StarIcon from "@mui/icons-material/Star";
 import MapDiscoveryIcon from "../assets/images/mapDiscovery.svg";
 import { useParams } from "react-router-dom";
 import Carousel from "react-multi-carousel";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
-import { CustomLeftArrow, CustomRightArrow } from "../Component/CarouselArrows";
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import {CustomLeftArrow, CustomRightArrow} from "../Component/CarouselArrows";
+import ReviewPopUp from "../Component/ReviewPopUp";
+import ServicePopUP from "../Component/ServicePopUP";
 import moment from "moment";
 
 const reviewResponsive = {
@@ -39,8 +41,12 @@ const REVIEWS = [
 ];
 
 const ProviderDetailsPage = () => {
-  const userAuth = JSON.parse(localStorage.getItem("AdAnima_auth"));
-  let { providerId } = useParams();
+    const userAuth = JSON.parse(localStorage.getItem("AdAnima_auth"));
+    const [isPopUp, setPopUp] = useState({
+        review: false,
+        service: false
+    })
+    let {providerId} = useParams();
 
   const [modelShow, setmodelShow] = useState(false);
 
@@ -278,7 +284,9 @@ const ProviderDetailsPage = () => {
                         style={{
                           fontSize: "14px",
                           color: "#FFC107",
-                        }}
+                        cursor: 'pointer'
+                                                }}
+                                                onClick={() => setPopUp((pre) => ({...pre, review: true}))}
                       >
                         Add Review
                       </p>
@@ -466,7 +474,7 @@ const ProviderDetailsPage = () => {
                     {userDetails?.find_user_service_details?.map((data) => {
                       return (
                         <>
-                          <div className="pro_carousel">
+                          <div className="pro_carousel" onClick={() => setPopUp((pre) => ({...pre, service: true}))}>
                             <div className="pro_carousel_content">
                               <span className="pro_carousel_title">
                                 Cupping Therapy
@@ -486,9 +494,17 @@ const ProviderDetailsPage = () => {
                 </>
               )}
             </div>
+              <div className="d-flex">
+                  <button className="massageBtn mt-3">Upcoming Event</button>
+                  <button className="massageBtn mt-3">Book Private Session</button>
+                  <button className="massageBtn mt-3">Questions?</button>
+                  <button className="massageBtn mt-3">Add To My Event</button>
+              </div>
           </div>
         </div>
       </section>
+        <ReviewPopUp open={isPopUp} setOpen={setPopUp}/>
+        <ServicePopUP open={isPopUp} setOpen={setPopUp}/>
     </>
   );
 };
