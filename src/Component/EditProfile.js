@@ -217,7 +217,7 @@ const EditProfile = ({ editModal, seteditModal }) => {
       >
         <button
           type="button"
-          class="close-modal"
+          className="close-modal"
           onClick={() => {
             seteditModal(false);
             setserviceOpen(false);
@@ -249,14 +249,14 @@ const EditProfile = ({ editModal, seteditModal }) => {
         {userAuth?.user_type == "provider" ? (
           <>
             <form onSubmit={registrationSubmite}>
-              <div class="text-center mb-3 mb-md-5">
-                <div class="upadte_profile">
+              <div className="text-center mb-3 mb-md-5">
+                <div className="upadte_profile">
                   <img
                     src={profileImage}
-                    class="pr-second"
+                    className="pr-second"
                     style={{ objectFit: "cover", objectPosition: "center" }}
                   />
-                  <div class="edit-btn">
+                  <div className="edit-btn">
                     <input
                       type="file"
                       name=""
@@ -275,13 +275,13 @@ const EditProfile = ({ editModal, seteditModal }) => {
                         e.target.value = "";
                       }}
                     />
-                    <span class="icon">
+                    <span className="icon">
                       <img src={EditIcon} />
                     </span>
                   </div>
                 </div>
               </div>
-              <div class="group-input">
+              <div className="group-input">
                 <svg
                   width="24"
                   height="24"
@@ -304,7 +304,7 @@ const EditProfile = ({ editModal, seteditModal }) => {
                   placeholder="Full Name"
                 />
               </div>
-              <div class="group-input">
+              <div className="group-input">
                 <svg
                   width="24"
                   height="24"
@@ -317,21 +317,21 @@ const EditProfile = ({ editModal, seteditModal }) => {
                       id="Vector"
                       d="M2.88539 8.84875C3.55805 6.13983 5.70602 4.04534 8.43056 3.44162L8.88443 3.34105C10.9366 2.88632 13.0634 2.88632 15.1156 3.34105L15.5694 3.44162C18.294 4.04534 20.442 6.13984 21.1146 8.84875C21.6285 10.9182 21.6285 13.0819 21.1146 15.1512C20.442 17.8602 18.294 19.9547 15.5694 20.5584L15.1156 20.659C13.0634 21.1137 10.9366 21.1137 8.88443 20.659L8.43056 20.5584C5.70601 19.9547 3.55805 17.8602 2.88539 15.1513C2.37154 13.0819 2.37154 10.9181 2.88539 8.84875Z"
                       stroke="#363853"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                       stroke-linecap="round"
                     />
                     <path
                       id="Vector_2"
                       d="M21.1146 15.1512C21.6285 13.0819 21.6285 10.9182 21.1146 8.84875C20.442 6.13984 18.294 4.04534 15.5694 3.44162L15.1156 3.34105C13.0634 2.88632 10.9366 2.88632 8.88443 3.34105L8.43056 3.44162C5.70602 4.04534 3.55805 6.13983 2.88539 8.84875C2.37154 10.9181 2.37154 13.0819 2.88539 15.1513C3.55805 17.8602 5.70601 19.9547 8.43056 20.5584L8.88443 20.659"
                       stroke="#363853"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                       stroke-linecap="round"
                     />
                     <path
                       id="Vector_3"
                       d="M8.15112 10.3501L10.7216 12.1866C11.4864 12.7329 12.5136 12.7329 13.2783 12.1866L15.8489 10.3501"
                       stroke="#363853"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                       stroke-linecap="round"
                     />
                   </g>
@@ -350,7 +350,7 @@ const EditProfile = ({ editModal, seteditModal }) => {
                   }}
                 />
               </div>
-              <div class="group-input">
+              <div className="group-input">
                 <PhoneInput
                   placeholder="Phone Number"
                   enableSearch={true}
@@ -365,7 +365,7 @@ const EditProfile = ({ editModal, seteditModal }) => {
                   }}
                 />
               </div>
-              <div class="group-input">
+              <div className="group-input">
                 <svg
                   width="24"
                   height="24"
@@ -429,8 +429,8 @@ const EditProfile = ({ editModal, seteditModal }) => {
                   }}
                 />
               </div>
-              <div class="mt-4">
-                <h4 class="input-label">
+              <div className="mt-4">
+                <h4 className="input-label">
                   Tell us more about you how would you like to be introduced?
                 </h4>
                 <textarea
@@ -444,35 +444,35 @@ const EditProfile = ({ editModal, seteditModal }) => {
                       provider_introduction: e.target.value,
                     });
                   }}
-                  class="dashed-border"
+                  className="dashed-border"
                 ></textarea>
               </div>
               <div className="mt-4">
-                <h4 class="input-label">Choose what best describes you</h4>
-                <div class="position-relative">
-                  <div class="group-input mt-2">
+                <h4 className="input-label">Choose what best describes you</h4>
+                <div className="position-relative">
+                  <div className="group-input mt-2">
                     <input
                       type="text"
                       name=""
                       placeholder="Select Discription Name"
-                      class="select-servcesss"
+                      className="select-servcesss"
                       onClick={() => {
                         setserviceOpen(!serviceOpen);
                       }}
                     />
                   </div>
                   <div
-                    class={serviceOpen ? "list-open open" : "list-open"}
+                    className={serviceOpen ? "list-open open" : "list-open"}
                     style={{ scrollBehavior: "smooth" }}
                   >
                     {serviceList?.map((data) => {
                       return (
                         <>
-                          <div class="group-input-check position-relative my-2">
-                            <div class="">
+                          <div className="group-input-check position-relative my-2">
+                            <div className="">
                               {data?.description_name == "Other" ? (
                                 <>
-                                  <label class="gred-checkbox">
+                                  <label className="gred-checkbox">
                                     {data?.description_name}
                                     <input
                                       type="checkbox"
@@ -524,12 +524,12 @@ const EditProfile = ({ editModal, seteditModal }) => {
                                         }
                                       }}
                                     />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                   {registration?.is_other_desc && (
                                     <>
                                       <div
-                                        class="group-input"
+                                        className="group-input"
                                         style={{
                                           margin: "10px 0 10px 0",
                                         }}
@@ -553,7 +553,7 @@ const EditProfile = ({ editModal, seteditModal }) => {
                                 </>
                               ) : (
                                 <>
-                                  <label class="gred-checkbox">
+                                  <label className="gred-checkbox">
                                     {data?.description_name}
                                     <input
                                       type="checkbox"
@@ -602,12 +602,12 @@ const EditProfile = ({ editModal, seteditModal }) => {
                                         }
                                       }}
                                     />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </>
                               )}
                             </div>
-                            {/* <h4 class="float-end">
+                            {/* <h4 className="float-end">
                               {data?.admin_service_amount}
                             </h4> */}
                           </div>
@@ -617,18 +617,18 @@ const EditProfile = ({ editModal, seteditModal }) => {
                   </div>
                 </div>
 
-                <div class="selected-item clearfix">
+                <div className="selected-item clearfix">
                   {selectServices.map((value, i) => {
                     return `${i + 1}. ${value.description_name}, `;
                   })}
                 </div>
               </div>
-              <div class="mt-4">
-                <h4 class="input-label float-start">
+              <div className="mt-4">
+                <h4 className="input-label float-start">
                   do you have a website?, or more links?
                 </h4>
                 <span
-                  class="plus-icon float-end"
+                  className="plus-icon float-end"
                   onClick={() => {
                     setregistration({
                       ...registration,
@@ -664,7 +664,7 @@ const EditProfile = ({ editModal, seteditModal }) => {
                 {registration?.website_links?.map((data, i) => {
                   return (
                     <>
-                      <div class="group-input mt-2 p-15 clearfix">
+                      <div className="group-input mt-2 p-15 clearfix">
                         <input
                           type="url"
                           name=""
@@ -689,7 +689,7 @@ const EditProfile = ({ editModal, seteditModal }) => {
                         {registration?.website_links?.length > 1 && (
                           <>
                             <span
-                              class="remove new-remove"
+                              className="remove new-remove"
                               style={{ top: "16px", right: "16px" }}
                               onClick={() => {
                                 setregistration({
@@ -716,7 +716,7 @@ const EditProfile = ({ editModal, seteditModal }) => {
                                     id="Vector"
                                     d="M12.3865 12.8635L7.61351 8.09054M7.61351 12.8635L12.3865 8.09054"
                                     stroke="#FF0000"
-                                    stroke-width="1.39212"
+                                    strokeWidth="1.39212"
                                     stroke-linecap="round"
                                   ></path>
                                 </g>
@@ -730,15 +730,15 @@ const EditProfile = ({ editModal, seteditModal }) => {
                 })}
               </div>
 
-              <div class="mt-4">
-                <h4 class="input-label">Upload Services Pictures.</h4>
-                <div class="multi_imgs mt-3">
+              <div className="mt-4">
+                <h4 className="input-label">Upload Services Pictures.</h4>
+                <div className="multi_imgs mt-3">
                   {serviceImage?.map((value, i) => {
                     return (
                       <>
-                        <div class="hexagone">
+                        <div className="hexagone">
                           <span
-                            class="remove"
+                            className="remove"
                             onClick={() => {
                               const newImage = serviceImage?.filter(
                                 (data, j) => {
@@ -767,7 +767,7 @@ const EditProfile = ({ editModal, seteditModal }) => {
                                   id="Vector"
                                   d="M12.3865 12.8635L7.61351 8.09054M7.61351 12.8635L12.3865 8.09054"
                                   stroke="#FF0000"
-                                  stroke-width="1.39212"
+                                  strokeWidth="1.39212"
                                   stroke-linecap="round"
                                 />
                               </g>
@@ -781,9 +781,9 @@ const EditProfile = ({ editModal, seteditModal }) => {
                   {selectServiceImage?.map((value, i) => {
                     return (
                       <>
-                        <div class="hexagone">
+                        <div className="hexagone">
                           <span
-                            class="remove"
+                            className="remove"
                             onClick={() => {
                               const newImage = selectServiceImage?.filter(
                                 (data, j) => {
@@ -816,7 +816,7 @@ const EditProfile = ({ editModal, seteditModal }) => {
                                   id="Vector"
                                   d="M12.3865 12.8635L7.61351 8.09054M7.61351 12.8635L12.3865 8.09054"
                                   stroke="#FF0000"
-                                  stroke-width="1.39212"
+                                  strokeWidth="1.39212"
                                   stroke-linecap="round"
                                 />
                               </g>
@@ -829,8 +829,8 @@ const EditProfile = ({ editModal, seteditModal }) => {
                   })}
                   {serviceImage.length + selectServiceImage.length < 7 && (
                     <>
-                      <div class="d-inline-block">
-                        <div class="custom-upload-2">
+                      <div className="d-inline-block">
+                        <div className="custom-upload-2">
                           <input
                             type="file"
                             name=""
@@ -865,18 +865,18 @@ const EditProfile = ({ editModal, seteditModal }) => {
                 </div>
               </div>
 
-              <div class="btn_gred mt-4">
+              <div className="btn_gred mt-4">
                 {loader ? (
                   <a
                     href="#"
                     onClick={(e) => e.preventDefault()}
-                    class="btn_admina "
+                    className="btn_admina "
                   >
                     {/* save */}
-                    <div class="loader"></div>
+                    <div className="loader"></div>
                   </a>
                 ) : (
-                  <button type="submit" class="btn_admina ">
+                  <button type="submit" className="btn_admina ">
                     save
                   </button>
                 )}
@@ -886,14 +886,14 @@ const EditProfile = ({ editModal, seteditModal }) => {
         ) : (
           <>
             <form onSubmit={(e) => userregistrationSubmite(e)}>
-              <div class="text-center mb-3 mb-md-5">
-                <div class="upadte_profile">
+              <div className="text-center mb-3 mb-md-5">
+                <div className="upadte_profile">
                   <img
                     src={userprofileImage}
-                    class="pr-second"
+                    className="pr-second"
                     style={{ objectFit: "cover", objectPosition: "center" }}
                   />
-                  <div class="edit-btn">
+                  <div className="edit-btn">
                     <input
                       type="file"
                       accept="image/png, image/jpeg"
@@ -910,13 +910,13 @@ const EditProfile = ({ editModal, seteditModal }) => {
                         e.target.value = "";
                       }}
                     />
-                    <span class="icon">
+                    <span className="icon">
                       <img src={EditIcon} />
                     </span>
                   </div>
                 </div>
               </div>
-              <div class="group-input ">
+              <div className="group-input ">
                 <svg
                   width="24"
                   height="24"
@@ -939,7 +939,7 @@ const EditProfile = ({ editModal, seteditModal }) => {
                   placeholder="Full Name"
                 />
               </div>
-              <div class="group-input">
+              <div className="group-input">
                 <svg
                   width="24"
                   height="24"
@@ -952,21 +952,21 @@ const EditProfile = ({ editModal, seteditModal }) => {
                       id="Vector"
                       d="M2.88539 8.84875C3.55805 6.13983 5.70602 4.04534 8.43056 3.44162L8.88443 3.34105C10.9366 2.88632 13.0634 2.88632 15.1156 3.34105L15.5694 3.44162C18.294 4.04534 20.442 6.13984 21.1146 8.84875C21.6285 10.9182 21.6285 13.0819 21.1146 15.1512C20.442 17.8602 18.294 19.9547 15.5694 20.5584L15.1156 20.659C13.0634 21.1137 10.9366 21.1137 8.88443 20.659L8.43056 20.5584C5.70601 19.9547 3.55805 17.8602 2.88539 15.1513C2.37154 13.0819 2.37154 10.9181 2.88539 8.84875Z"
                       stroke="#363853"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                       stroke-linecap="round"
                     />
                     <path
                       id="Vector_2"
                       d="M21.1146 15.1512C21.6285 13.0819 21.6285 10.9182 21.1146 8.84875C20.442 6.13984 18.294 4.04534 15.5694 3.44162L15.1156 3.34105C13.0634 2.88632 10.9366 2.88632 8.88443 3.34105L8.43056 3.44162C5.70602 4.04534 3.55805 6.13983 2.88539 8.84875C2.37154 10.9181 2.37154 13.0819 2.88539 15.1513C3.55805 17.8602 5.70601 19.9547 8.43056 20.5584L8.88443 20.659"
                       stroke="#363853"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                       stroke-linecap="round"
                     />
                     <path
                       id="Vector_3"
                       d="M8.15112 10.3501L10.7216 12.1866C11.4864 12.7329 12.5136 12.7329 13.2783 12.1866L15.8489 10.3501"
                       stroke="#363853"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                       stroke-linecap="round"
                     />
                   </g>
@@ -985,7 +985,7 @@ const EditProfile = ({ editModal, seteditModal }) => {
                   }}
                 />
               </div>
-              <div class="group-input">
+              <div className="group-input">
                 <PhoneInput
                   placeholder="Phone Number"
                   enableSearch={true}
@@ -1000,7 +1000,7 @@ const EditProfile = ({ editModal, seteditModal }) => {
                   }}
                 />
               </div>
-              <div class="group-input">
+              <div className="group-input">
                 <svg
                   width="24"
                   height="24"
@@ -1065,18 +1065,18 @@ const EditProfile = ({ editModal, seteditModal }) => {
                 />
               </div>
 
-              <div class="btn_gred mt-4">
+              <div className="btn_gred mt-4">
                 {loader ? (
                   <a
                     href="#"
                     onClick={(e) => e.preventDefault()}
-                    class="btn_admina "
+                    className="btn_admina "
                   >
                     {/* save */}
-                    <div class="loader"></div>
+                    <div className="loader"></div>
                   </a>
                 ) : (
-                  <button type="submit" class="btn_admina ">
+                  <button type="submit" className="btn_admina ">
                     save
                   </button>
                 )}

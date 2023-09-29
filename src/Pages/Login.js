@@ -327,21 +327,21 @@ const Login = () => {
     <>
       {!registrationSecound ? (
         <>
-          <div class="login-screen">
-            <div class="frame-parent">
-              <div class="group-parent row m-0">
-                <div class="group-login-bg col-12 col-sm-5">
-                  <div class="text-center">
+          <div className="login-screen">
+            <div className="frame-parent">
+              <div className="group-parent row m-0">
+                <div className="group-login-bg col-12 col-sm-5">
+                  <div className="text-center">
                     <img
-                      class="img-fluid logo"
+                      className="img-fluid logo"
                       alt=""
                       src="images/logo.png"
                     />
                   </div>
-                  <p class="login-using-social text-center mb-3 mb-sm-4">
+                  <p className="login-using-social text-center mb-3 mb-sm-4">
                     Login using social media to get quick access
                   </p>
-                  <button class="btn-login" onClick={() => handleGoogleLogin()}>
+                  <button className="btn-login" onClick={() => handleGoogleLogin()}>
                     <svg
                       width="24"
                       height="24"
@@ -383,7 +383,7 @@ const Login = () => {
                     Continue with Google
                   </button>
                   <button
-                    class="btn-login"
+                    className="btn-login"
                     onClick={() => handleFacebooklogin()}
                   >
                     <svg
@@ -419,12 +419,12 @@ const Login = () => {
                     Continue with Facebook
                   </button>
                 </div>
-                <div class="group col-12 col-sm-7 p-0">
-                  <div class="padding-inner">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                      <li class="nav-item" role="presentation">
+                <div className="group col-12 col-sm-7 p-0">
+                  <div className="padding-inner">
+                    <ul className="nav nav-tabs" id="myTab" role="tablist">
+                      <li className="nav-item" role="presentation">
                         <button
-                          class="nav-link active"
+                          className="nav-link active"
                           id="login-tab"
                           data-bs-toggle="tab"
                           data-bs-target="#login"
@@ -436,9 +436,9 @@ const Login = () => {
                           Login
                         </button>
                       </li>
-                      <li class="nav-item" role="presentation">
+                      <li className="nav-item" role="presentation">
                         <button
-                          class="nav-link"
+                          className="nav-link"
                           id="singup-tab"
                           data-bs-toggle="tab"
                           data-bs-target="#singup"
@@ -451,7 +451,7 @@ const Login = () => {
                         </button>
                       </li>
                     </ul>
-                    <div class="tab-content" id="myTabContent">
+                    <div className="tab-content" id="myTabContent">
                       <SignIn />
                       <SignUp
                         signUpChange={signUpChange}
@@ -470,14 +470,14 @@ const Login = () => {
         <>
           {optScreen ? (
             <>
-              <div class="login-screen">
-                <div class="frame-parent min-screen p-0 ">
-                  <div class="group-parent m-0">
-                    <div class="group ">
-                      <div class="padding-inner pt-2">
+              <div className="login-screen">
+                <div className="frame-parent min-screen p-0 ">
+                  <div className="group-parent m-0">
+                    <div className="group ">
+                      <div className="padding-inner pt-2">
                         <a
                           href="#"
-                          class="back-button"
+                          className="back-button"
                           onClick={(e) => {
                             e.preventDefault();
                             setotpScreen(true);
@@ -492,16 +492,16 @@ const Login = () => {
                         >
                           <img src="images/arrow-left.svg" />
                         </a>
-                        <div class="text-center">
+                        <div className="text-center">
                           <img
-                            class="img-fluid logo"
+                            className="img-fluid logo"
                             alt=""
                             src="images/logo.png"
                             width="145px"
                           />
                         </div>
                         <form
-                          class="login_margin"
+                          className="login_margin"
                           onSubmit={(e) => {
                             e.preventDefault();
                             verifyOtp();
@@ -513,14 +513,14 @@ const Login = () => {
                             });
                           }}
                         >
-                          <h3 class="mb-3 mb-md-3 page-title">
+                          <h3 className="mb-3 mb-md-3 page-title">
                             OTP Verification
                           </h3>
-                          <p class="text-left mb-3 mb-md-4">
+                          <p className="text-left mb-3 mb-md-4">
                             Check your Email, We’ve sent you PIN at Your Email.
                           </p>
-                          <div class="otp-field">
-                            <div class="group-input">
+                          <div className="otp-field">
+                            <div className="group-input">
                               <input
                                 ref={otpBox[0]}
                                 type="text"
@@ -534,7 +534,7 @@ const Login = () => {
                                 onKeyUp={(e) => otpkeydown(e, 0)}
                               />
                             </div>
-                            <div class="group-input">
+                            <div className="group-input">
                               <input
                                 ref={otpBox[1]}
                                 type="text"
@@ -548,7 +548,7 @@ const Login = () => {
                                 onKeyUp={(e) => otpkeydown(e, 1)}
                               />
                             </div>
-                            <div class="group-input">
+                            <div className="group-input">
                               <input
                                 ref={otpBox[2]}
                                 type="text"
@@ -562,7 +562,7 @@ const Login = () => {
                                 onKeyUp={(e) => otpkeydown(e, 2)}
                               />
                             </div>
-                            <div class="group-input">
+                            <div className="group-input">
                               <input
                                 ref={otpBox[3]}
                                 type="text"
@@ -577,15 +577,15 @@ const Login = () => {
                               />
                             </div>
                           </div>
-                          <div class="btn_gred mt-4">
-                            <button type="submit" class="btn_admina">
+                          <div className="btn_gred mt-4">
+                            <button type="submit" className="btn_admina">
                               Verify
                             </button>
                           </div>
-                          <div class="text-center">
-                            <p class="mt-3">Didn’t you recevie any code?</p>
+                          <div className="text-center">
+                            <p className="mt-3">Didn’t you recevie any code?</p>
                             <button
-                              class="send_link"
+                              className="send_link"
                               onClick={(e) => {
                                 e.preventDefault();
                                 sendotp();
@@ -605,14 +605,14 @@ const Login = () => {
             <>
               {signUpChange.user_type == "provider" ? (
                 <>
-                  <div class="login-screen">
-                    <div class="frame-parent min-screen p-0 ">
-                      <div class="group-parent m-0">
-                        <div class="group ">
-                          <div class="padding-inner pt-2 p-20">
+                  <div className="login-screen">
+                    <div className="frame-parent min-screen p-0 ">
+                      <div className="group-parent m-0">
+                        <div className="group ">
+                          <div className="padding-inner pt-2 p-20">
                             <a
                               href="#"
-                              class="back-button"
+                              className="back-button"
                               onClick={(e) => {
                                 e.preventDefault();
                                 setotpScreen(true);
@@ -622,24 +622,24 @@ const Login = () => {
                               <img src="images/arrow-left.svg" />
                             </a>
                             <div
-                              class="text-center"
+                              className="text-center"
                               style={{ marginBottom: "-15px" }}
                             >
                               <img
-                                class="img-fluid logo"
+                                className="img-fluid logo"
                                 alt=""
                                 src="images/logo.png"
                                 width="145px"
                               />
                             </div>
                             <form onSubmit={registrationSubmite}>
-                              <div class="d-block d-sm-flex align-items-center">
-                                <div class="custom-upload">
+                              <div className="d-block d-sm-flex align-items-center">
+                                <div className="custom-upload">
                                   {profileImage !== "" && (
                                     <>
                                       <img
                                         src={profileImage}
-                                        class="profile_uploaded"
+                                        className="profile_uploaded"
                                       />
                                     </>
                                   )}
@@ -668,14 +668,14 @@ const Login = () => {
                                   />
                                   <img
                                     src="images/plus.png"
-                                    class="profile_uploaded-after"
+                                    className="profile_uploaded-after"
                                   />
                                 </div>
-                                <div class="mt-3 mt-sm-0">
-                                  <h4 class="input-label">
+                                <div className="mt-3 mt-sm-0">
+                                  <h4 className="input-label">
                                     Please choose a picture for your profile
                                   </h4>
-                                  <p class="input-desc mb-0">
+                                  <p className="input-desc mb-0">
                                     Note: Your Information will only be Viewable
                                     by the providers you choose to interact
                                     with.
@@ -687,8 +687,8 @@ const Login = () => {
                                   {err?.provider_profile}
                                 </p>
                               )}
-                              <div class="mt-3">
-                                <h4 class="input-label">
+                              <div className="mt-3">
+                                <h4 className="input-label">
                                   Tell us more about you how would you like to
                                   be introduced?
                                 </h4>
@@ -703,27 +703,27 @@ const Login = () => {
                                   }}
                                   value={registration.provider_introduction}
                                   placeholder=""
-                                  class="dashed-border"
+                                  className="dashed-border"
                                 ></textarea>
                               </div>
-                              <div class="mt-3">
-                                <h4 class="input-label">
+                              <div className="mt-3">
+                                <h4 className="input-label">
                                   Choose what best describes you
                                 </h4>
-                                <div class="position-relative">
-                                  <div class="group-input mt-2">
+                                <div className="position-relative">
+                                  <div className="group-input mt-2">
                                     <input
                                       type="text"
                                       name=""
                                       placeholder="Select Discription Name"
-                                      class="select-servcesss"
+                                      className="select-servcesss"
                                       onClick={() => {
                                         setserviceOpen(!serviceOpen);
                                       }}
                                     />
                                   </div>
                                   <div
-                                    class={
+                                    className={
                                       serviceOpen
                                         ? "list-open open"
                                         : "list-open"
@@ -733,12 +733,12 @@ const Login = () => {
                                     {serviceList?.map((data) => {
                                       return (
                                         <>
-                                          <div class="group-input-check position-relative my-2">
-                                            <div class="">
+                                          <div className="group-input-check position-relative my-2">
+                                            <div className="">
                                               {data?.description_name ==
                                               "Other" ? (
                                                 <>
-                                                  <label class="gred-checkbox">
+                                                  <label className="gred-checkbox">
                                                     {data?.description_name}
                                                     <input
                                                       type="checkbox"
@@ -821,12 +821,12 @@ const Login = () => {
                                                         }
                                                       }}
                                                     />
-                                                    <span class="checkmark"></span>
+                                                    <span className="checkmark"></span>
                                                   </label>
                                                   {registration?.is_other_desc && (
                                                     <>
                                                       <div
-                                                        class="group-input"
+                                                        className="group-input"
                                                         style={{
                                                           margin:
                                                             "10px 0 10px 0",
@@ -856,7 +856,7 @@ const Login = () => {
                                                 </>
                                               ) : (
                                                 <>
-                                                  <label class="gred-checkbox">
+                                                  <label className="gred-checkbox">
                                                     {data?.description_name}
                                                     <input
                                                       type="checkbox"
@@ -936,12 +936,12 @@ const Login = () => {
                                                         }
                                                       }}
                                                     />
-                                                    <span class="checkmark"></span>
+                                                    <span className="checkmark"></span>
                                                   </label>
                                                 </>
                                               )}
                                             </div>
-                                            {/* <h4 class="float-end">
+                                            {/* <h4 className="float-end">
                                           {data?.admin_service_amount}
                                         </h4> */}
                                           </div>
@@ -951,7 +951,7 @@ const Login = () => {
                                   </div>
                                 </div>
 
-                                <div class="selected-item clearfix">
+                                <div className="selected-item clearfix">
                                   {selectServices.map((value, i) => {
                                     return `${i + 1}. ${
                                       value.description_name
@@ -964,12 +964,12 @@ const Login = () => {
                                   {err?.services}
                                 </p>
                               )}
-                              <div class="mt-3">
-                                <h4 class="input-label float-start">
+                              <div className="mt-3">
+                                <h4 className="input-label float-start">
                                   Do you have a website?, or more links?
                                 </h4>
                                 <span
-                                  class="plus-icon float-end"
+                                  className="plus-icon float-end"
                                   onClick={() => {
                                     setregistration({
                                       ...registration,
@@ -1008,7 +1008,7 @@ const Login = () => {
                                 {registration?.website_links?.map((data, i) => {
                                   return (
                                     <>
-                                      <div class="group-input mt-2 p-15 clearfix">
+                                      <div className="group-input mt-2 p-15 clearfix">
                                         <input
                                           type="url"
                                           name=""
@@ -1035,7 +1035,7 @@ const Login = () => {
                                           1 && (
                                           <>
                                             <span
-                                              class="remove new-remove"
+                                              className="remove new-remove"
                                               style={{
                                                 top: "16px",
                                                 right: "16px",
@@ -1065,7 +1065,7 @@ const Login = () => {
                                                     id="Vector"
                                                     d="M12.3865 12.8635L7.61351 8.09054M7.61351 12.8635L12.3865 8.09054"
                                                     stroke="#FF0000"
-                                                    stroke-width="1.39212"
+                                                    strokeWidth="1.39212"
                                                     stroke-linecap="round"
                                                   ></path>
                                                 </g>
@@ -1079,17 +1079,17 @@ const Login = () => {
                                 })}
                               </div>
 
-                              <div class="mt-3">
-                                <h4 class="input-label">
+                              <div className="mt-3">
+                                <h4 className="input-label">
                                   Upload Services Pictures
                                 </h4>
-                                <div class="multi_imgs mt-2">
+                                <div className="multi_imgs mt-2">
                                   {serviceImage?.map((value, i) => {
                                     return (
                                       <>
-                                        <div class="hexagone">
+                                        <div className="hexagone">
                                           <span
-                                            class="remove"
+                                            className="remove"
                                             onClick={() => {
                                               const newImage =
                                                 serviceImage?.filter(
@@ -1124,7 +1124,7 @@ const Login = () => {
                                                   id="Vector"
                                                   d="M12.3865 12.8635L7.61351 8.09054M7.61351 12.8635L12.3865 8.09054"
                                                   stroke="#FF0000"
-                                                  stroke-width="1.39212"
+                                                  strokeWidth="1.39212"
                                                   stroke-linecap="round"
                                                 />
                                               </g>
@@ -1137,8 +1137,8 @@ const Login = () => {
                                   })}
                                   {serviceImage.length < 7 && (
                                     <>
-                                      <div class="d-inline-block">
-                                        <div class="custom-upload-2">
+                                      <div className="d-inline-block">
+                                        <div className="custom-upload-2">
                                           <input
                                             type="file"
                                             name=""
@@ -1178,18 +1178,18 @@ const Login = () => {
                                 </p>
                               )}
 
-                              <div class="btn_gred mt-3">
+                              <div className="btn_gred mt-3">
                                 {loader ? (
                                   <a
                                     href="#"
                                     onClick={(e) => e.preventDefault()}
-                                    class="btn_admina "
+                                    className="btn_admina "
                                   >
                                     {/* save */}
-                                    <div class="loader"></div>
+                                    <div className="loader"></div>
                                   </a>
                                 ) : (
-                                  <button type="submit" class="btn_admina ">
+                                  <button type="submit" className="btn_admina ">
                                     Continue
                                   </button>
                                 )}
@@ -1205,17 +1205,17 @@ const Login = () => {
                 <>
                   {!congratulationScreen ? (
                     <>
-                      <div class="login-screen">
+                      <div className="login-screen">
                         <div
-                          class="frame-parent min-screen p-0 "
+                          className="frame-parent min-screen p-0 "
                           style={{ minHeight: "auto" }}
                         >
-                          <div class="group-parent m-0">
-                            <div class="group ">
-                              <div class="padding-inner pt-2">
+                          <div className="group-parent m-0">
+                            <div className="group ">
+                              <div className="padding-inner pt-2">
                                 <a
                                   href="#"
-                                  class="back-button"
+                                  className="back-button"
                                   onClick={(e) => {
                                     e.preventDefault();
                                     setotpScreen(true);
@@ -1224,27 +1224,27 @@ const Login = () => {
                                 >
                                   <img src="images/arrow-left.svg" />
                                 </a>
-                                <div class="text-center">
+                                <div className="text-center">
                                   <img
-                                    class="img-fluid logo"
+                                    className="img-fluid logo"
                                     alt=""
                                     src="images/logo.png"
                                     width="145px"
                                   />
                                 </div>
                                 <form
-                                  class="login_margin mt-0"
+                                  className="login_margin mt-0"
                                   onSubmit={(e) => userregistrationSubmite(e)}
                                 >
-                                  <h3 class="mb-3 mb-md-3 page-title text-center f-18">
+                                  <h3 className="mb-3 mb-md-3 page-title text-center f-18">
                                     Please choose a picture for your profile
                                   </h3>
-                                  <div class="text-center user-profile">
-                                    <div class="custom-upload ">
+                                  <div className="text-center user-profile">
+                                    <div className="custom-upload ">
                                       {userprofileImage !== "" && (
                                         <img
                                           src={userprofileImage}
-                                          class="profile_uploaded"
+                                          className="profile_uploaded"
                                         />
                                       )}
                                       <input
@@ -1274,7 +1274,7 @@ const Login = () => {
                                       />
                                     </div>
                                   </div>
-                                  <p class="text-center mb-3 mb-md-4 max-width-300">
+                                  <p className="text-center mb-3 mb-md-4 max-width-300">
                                     Note: Your Information will only be Viewable
                                     by the providers you choose to interact
                                     with.
@@ -1285,21 +1285,21 @@ const Login = () => {
                                     </p>
                                   )}
 
-                                  <div class="btn_gred mt-4">
-                                    <div class="btn_gred mt-3">
+                                  <div className="btn_gred mt-4">
+                                    <div className="btn_gred mt-3">
                                       {loader ? (
                                         <a
                                           href="#"
                                           onClick={(e) => e.preventDefault()}
-                                          class="btn_admina "
+                                          className="btn_admina "
                                         >
                                           {/* save */}
-                                          <div class="loader"></div>
+                                          <div className="loader"></div>
                                         </a>
                                       ) : (
                                         <button
                                           type="submit"
-                                          class="btn_admina "
+                                          className="btn_admina "
                                         >
                                           Continue
                                         </button>
@@ -1332,10 +1332,10 @@ const Login = () => {
           setuserTypeModal(false);
         }}
       >
-        <h3 class="mb-3 mt-3 text-center">Are you a Provider?</h3>
-        <div class="btn_gred mt-3">
+        <h3 className="mb-3 mt-3 text-center">Are you a Provider?</h3>
+        <div className="btn_gred mt-3">
           <button
-            class="btn_admina"
+            className="btn_admina"
             onClick={() => {
               setsignUpChange({ ...signUpChange, user_type: "provider" });
               setuserTypeModal(false);
@@ -1345,7 +1345,7 @@ const Login = () => {
             Yes
           </button>
           <button
-            class="btn_admina"
+            className="btn_admina"
             onClick={() => {
               setsignUpChange({ ...signUpChange, user_type: "user" });
               setuserTypeModal(false);

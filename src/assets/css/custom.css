@@ -860,7 +860,6 @@ h1 {
     list-style: none;
     position: relative;
     margin-bottom: 15px;
-    padding-left: 35px;
     font-size: 16px;
     font-weight: 600;
     color: #000000;
@@ -875,6 +874,7 @@ h1 {
     /*position: absolute;*/
     left: 0;
     top: 0;
+    margin-right: 10px;
 }
 
 .dec_title {

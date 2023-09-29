@@ -9,6 +9,7 @@ export const GOOGLE_API_KEY = "AIzaSyAECw5ncpHgZrKY1Wud8LwefYuOC6Ijnzs"
 export const URL_PATH = {
   login: "/user/sign_in",
   user_details: "/user/get_profile",
+  user_rating: "/user/rating_review_list",
   service_list: "/user/description_list",
   sign_up: "/user/sign_up",
   edit_service: "/user/edit_service_amount",
@@ -26,5 +27,5 @@ export const URL_PATH = {
   check_mail: "/user/check_email",
   home_service_list: '/my_page/home_service_list',
   save_service: '/my_page/save_unsave_service',
-  other_provider_details : ""
+  get_my_page_details : "/my_page/get_my_page"
 };

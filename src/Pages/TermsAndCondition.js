@@ -3,20 +3,20 @@ import React from "react";
 const TermsAndCondition = () => {
   return (
     <>
-      <section class="main-page pt-0">
-        <div class="main-inner">
-          <div class="container">
-            <h6 class="terms">
+      <section className="main-page pt-0">
+        <div className="main-inner">
+          <div className="container">
+            <h6 className="terms">
               Welcome to Ad Anima Platform! These terms and conditions ("Terms")
               govern your use of the Ad Anima Platform as a service provider,
               retreat owner, organizer, or member user. By accessing or using
               the Ad Anima Platform, you agree to be bound by these Terms.
             </h6>
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="heading1">
+            <div className="accordion" id="accordionExample">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading1">
                   <button
-                    class="accordion-button"
+                    className="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapse1"
@@ -28,11 +28,11 @@ const TermsAndCondition = () => {
                 </h2>
                 <div
                   id="collapse1"
-                  class="accordion-collapse collapse show"
+                  className="accordion-collapse collapse show"
                   aria-labelledby="heading1"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
+                  <div className="accordion-body">
                     Ad Anima Platform serves as a medium to connect service
                     providers, retreat owners, organizers, and member users. The
                     platform enables users to engage in lawful activities and
@@ -41,10 +41,10 @@ const TermsAndCondition = () => {
                 </div>
               </div>
 
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="heading2">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading2">
                   <button
-                    class="accordion-button collapsed"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapse2"
@@ -56,12 +56,12 @@ const TermsAndCondition = () => {
                 </h2>
                 <div
                   id="collapse2"
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   aria-labelledby="heading2"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
-                    <h4 class="subpoint">
+                  <div className="accordion-body">
+                    <h4 className="subpoint">
                       a. Service Providers, Retreat Owners, Organizers:
                       <li>
                         You are responsible for the accuracy and completeness of
@@ -85,7 +85,7 @@ const TermsAndCondition = () => {
                         organizers
                       </li>
                     </h4>
-                    <h4 class="subpoint">
+                    <h4 className="subpoint">
                       b. Member Users:
                       <li>
                         You agree to engage in lawful behavior and use the app
@@ -109,10 +109,10 @@ const TermsAndCondition = () => {
                 </div>
               </div>
 
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="heading4">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading4">
                   <button
-                    class="accordion-button collapsed"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapse3"
@@ -124,12 +124,12 @@ const TermsAndCondition = () => {
                 </h2>
                 <div
                   id="collapse3"
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   aria-labelledby="heading3"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
-                    <h4 class="subpoint">
+                  <div className="accordion-body">
+                    <h4 className="subpoint">
                       a. Security:
                       <li>
                         Ad Anima Platform may collect and store personal
@@ -149,7 +149,7 @@ const TermsAndCondition = () => {
                         are in control of the information we keep.
                       </li>
                     </h4>
-                    <h4 class="subpoint">
+                    <h4 className="subpoint">
                       b. Legal Purposes:
                       <li>
                         Ad Anima Platform may share information with law
@@ -165,10 +165,10 @@ const TermsAndCondition = () => {
                 </div>
               </div>
 
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="heading4">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading4">
                   <button
-                    class="accordion-button collapsed"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapse4"
@@ -180,12 +180,12 @@ const TermsAndCondition = () => {
                 </h2>
                 <div
                   id="collapse4"
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   aria-labelledby="heading4"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
-                    <h4 class="subpoint">
+                  <div className="accordion-body">
+                    <h4 className="subpoint">
                       a. Ad Anima Platform:
                       <li>
                         All intellectual property rights related to the Ad Anima
@@ -199,7 +199,7 @@ const TermsAndCondition = () => {
                         without prior written consent.
                       </li>
                     </h4>
-                    <h4 class="subpoint">
+                    <h4 className="subpoint">
                       b. User Content:
                       <li>
                         By posting or sharing content on the platform, you grant
@@ -213,10 +213,10 @@ const TermsAndCondition = () => {
                 </div>
               </div>
 
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="heading5">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading5">
                   <button
-                    class="accordion-button collapsed"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapse5"
@@ -228,16 +228,16 @@ const TermsAndCondition = () => {
                 </h2>
                 <div
                   id="collapse5"
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   aria-labelledby="heading5"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
-                    <h4 class="subpoint">
+                  <div className="accordion-body">
+                    <h4 className="subpoint">
                       For Service Providers, Retreat Owners, and Organizers
                     </h4>
                     <div style={{marginLeft: "15px;"}}>
-                      <div class="span_div">
+                      <div className="span_div">
                         Listing Fees:{" "}
                         <span>
                           Listings are free or charge for Service Providers,
@@ -248,7 +248,7 @@ const TermsAndCondition = () => {
                           upfront.
                         </span>
                       </div>
-                      <div class="span_div">
+                      <div className="span_div">
                         Transaction Fees:{" "}
                         <span>
                           Ad Anima Platform charges a transaction fee for each
@@ -259,7 +259,7 @@ const TermsAndCondition = () => {
                           Retreat Owners, and Organizers.
                         </span>
                       </div>
-                      <div class="span_div">
+                      <div className="span_div">
                         Payouts:{" "}
                         <span>
                           Payments from users will be processed through our
@@ -268,7 +268,7 @@ const TermsAndCondition = () => {
                           completion of the service, retreat, or event.
                         </span>
                       </div>
-                      <div class="span_div">
+                      <div className="span_div">
                         Taxes:{" "}
                         <span>
                           You are solely responsible for determining your tax
@@ -279,9 +279,9 @@ const TermsAndCondition = () => {
                         </span>
                       </div>
                     </div>
-                    <h4 class="subpoint">For Member Users</h4>
+                    <h4 className="subpoint">For Member Users</h4>
                     <div style={{marginLeft: "15px;"}}>
-                      <div class="span_div">
+                      <div className="span_div">
                         Booking Fees:{" "}
                         <span>
                           Users may be charged a booking fee when reserving
@@ -290,21 +290,21 @@ const TermsAndCondition = () => {
                           purchases.
                         </span>
                       </div>
-                      <div class="span_div">
+                      <div className="span_div">
                         Payment Methods:{" "}
                         <span>
                           We accept the following methods of payment:credit
                           card, debit card PayPal.
                         </span>
                       </div>
-                      <div class="span_div">
+                      <div className="span_div">
                         Payment Timeline:{" "}
                         <span>
                           Full payment for services, retreats, or events must be
                           made at the time of booking.
                         </span>
                       </div>
-                      <div class="span_div">
+                      <div className="span_div">
                         Currency:{" "}
                         <span>
                           All transactions will be processed in USD . If you are
@@ -313,8 +313,8 @@ const TermsAndCondition = () => {
                         </span>
                       </div>
                     </div>
-                    <h4 class="subpoint">General</h4>
-                    <div class="span_div" style={{marginLeft: "15px;"}}>
+                    <h4 className="subpoint">General</h4>
+                    <div className="span_div" style={{marginLeft: "15px;"}}>
                       Changes to Fees:{" "}
                       <span>
                         Ad Anima Platform reserves the right to change any fees
@@ -323,9 +323,9 @@ const TermsAndCondition = () => {
                       </span>
                     </div>
                     <div  style={{marginLeft: "15px;"}}>
-                      <div class="span_div">
+                      <div className="span_div">
                         Refunds and Cancellation:
-                        <h6 class="subpoint new_sub">
+                        <h6 className="subpoint new_sub">
                           Services
                           <li>
                             Users can reschedule their services based on the
@@ -350,7 +350,7 @@ const TermsAndCondition = () => {
                             applied
                           </li>
                         </h6>
-                        <h6 class="subpoint new_sub">
+                        <h6 className="subpoint new_sub">
                           Events
                           <li>
                             The user can reschedule if there is availability,
@@ -367,10 +367,10 @@ const TermsAndCondition = () => {
                 </div>
               </div>
 
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="heading6">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading6">
                   <button
-                    class="accordion-button collapsed"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapse6"
@@ -382,11 +382,11 @@ const TermsAndCondition = () => {
                 </h2>
                 <div
                   id="collapse6"
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   aria-labelledby="heading6"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
+                  <div className="accordion-body">
                     Ad Anima Platform reserves the right to terminate or suspend
                     your access to the platform at any time, without prior
                     notice, for any reason or no reason. You may also terminate
@@ -399,10 +399,10 @@ const TermsAndCondition = () => {
                 </div>
               </div>
 
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="heading7">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading7">
                   <button
-                    class="accordion-button collapsed"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapse7"
@@ -414,11 +414,11 @@ const TermsAndCondition = () => {
                 </h2>
                 <div
                   id="collapse7"
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   aria-labelledby="heading7"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
+                  <div className="accordion-body">
                     <p>
                       Ad Anima Platform is not responsible for the actions ,
                       conduct, or quality of services provided by service
@@ -442,10 +442,10 @@ const TermsAndCondition = () => {
                 </div>
               </div>
 
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="heading8">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading8">
                   <button
-                    class="accordion-button collapsed"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapse8"
@@ -457,11 +457,11 @@ const TermsAndCondition = () => {
                 </h2>
                 <div
                   id="collapse8"
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   aria-labelledby="heading8"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
+                  <div className="accordion-body">
                     Ad Anima Platform may modify these Terms at any time without
                     prior notice. Updated Terms will be posted on the platform
                     and a notice will be sent by email. Your continued use of
@@ -471,7 +471,7 @@ const TermsAndCondition = () => {
                 </div>
               </div>
 
-              <h6 class="terms">
+              <h6 className="terms">
                 Please read these Terms carefully and contact us if you have any
                 questions or concerns. By using the Ad Anima Platform, you
                 acknowledge that you have read, understood, and agreed to these

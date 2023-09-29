@@ -137,34 +137,34 @@ const ForgetPassword = () => {
     <>
       {tab == "forgot-password" && (
         <>
-          <div class="login-screen">
-            <div class="frame-parent min-screen p-0 ">
-              <div class="group-parent m-0">
-                <div class="group ">
-                  <div class="padding-inner pt-2">
-                    <Link to={"/login"} class="back-button">
+          <div className="login-screen">
+            <div className="frame-parent min-screen p-0 ">
+              <div className="group-parent m-0">
+                <div className="group ">
+                  <div className="padding-inner pt-2">
+                    <Link to={"/login"} className="back-button">
                       <img src="images/arrow-left.svg" />
                     </Link>
-                    <div class="text-center">
+                    <div className="text-center">
                       <img
-                        class="img-fluid logo"
+                        className="img-fluid logo"
                         alt=""
                         src="images/logo.png"
                         width="145px"
                       />
                     </div>
                     <form
-                      class="login_margin"
+                      className="login_margin"
                       onSubmit={(e) => {
                         e.preventDefault();
                         sendotp();
                       }}
                     >
-                      <h3 class="mb-3 mb-md-3 page-title">Forgot Password,</h3>
-                      <p class="text-left mb-3 mb-md-4">
+                      <h3 className="mb-3 mb-md-3 page-title">Forgot Password,</h3>
+                      <p className="text-left mb-3 mb-md-4">
                         Enter Your Email And Get OTP
                       </p>
-                      <div class="group-input">
+                      <div className="group-input">
                         <svg
                           width="24"
                           height="24"
@@ -177,21 +177,21 @@ const ForgetPassword = () => {
                               id="Vector"
                               d="M2.88539 8.84875C3.55805 6.13983 5.70602 4.04534 8.43056 3.44162L8.88443 3.34105C10.9366 2.88632 13.0634 2.88632 15.1156 3.34105L15.5694 3.44162C18.294 4.04534 20.442 6.13984 21.1146 8.84875C21.6285 10.9182 21.6285 13.0819 21.1146 15.1512C20.442 17.8602 18.294 19.9547 15.5694 20.5584L15.1156 20.659C13.0634 21.1137 10.9366 21.1137 8.88443 20.659L8.43056 20.5584C5.70601 19.9547 3.55805 17.8602 2.88539 15.1513C2.37154 13.0819 2.37154 10.9181 2.88539 8.84875Z"
                               stroke="#363853"
-                              stroke-width="1.5"
+                              strokeWidth="1.5"
                               stroke-linecap="round"
                             />
                             <path
                               id="Vector_2"
                               d="M21.1146 15.1512C21.6285 13.0819 21.6285 10.9182 21.1146 8.84875C20.442 6.13984 18.294 4.04534 15.5694 3.44162L15.1156 3.34105C13.0634 2.88632 10.9366 2.88632 8.88443 3.34105L8.43056 3.44162C5.70602 4.04534 3.55805 6.13983 2.88539 8.84875C2.37154 10.9181 2.37154 13.0819 2.88539 15.1513C3.55805 17.8602 5.70601 19.9547 8.43056 20.5584L8.88443 20.659"
                               stroke="#363853"
-                              stroke-width="1.5"
+                              strokeWidth="1.5"
                               stroke-linecap="round"
                             />
                             <path
                               id="Vector_3"
                               d="M8.15112 10.3501L10.7216 12.1866C11.4864 12.7329 12.5136 12.7329 13.2783 12.1866L15.8489 10.3501"
                               stroke="#363853"
-                              stroke-width="1.5"
+                              strokeWidth="1.5"
                               stroke-linecap="round"
                             />
                           </g>
@@ -208,8 +208,8 @@ const ForgetPassword = () => {
                         />
                       </div>
 
-                      <div class="btn_gred mt-4">
-                        <button type="submit" class="btn_admina ">
+                      <div className="btn_gred mt-4">
+                        <button type="submit" className="btn_admina ">
                           Get OTP
                         </button>
                       </div>
@@ -224,14 +224,14 @@ const ForgetPassword = () => {
 
       {tab == "otp" && (
         <>
-          <div class="login-screen">
-            <div class="frame-parent min-screen p-0 ">
-              <div class="group-parent m-0">
-                <div class="group ">
-                  <div class="padding-inner pt-2">
+          <div className="login-screen">
+            <div className="frame-parent min-screen p-0 ">
+              <div className="group-parent m-0">
+                <div className="group ">
+                  <div className="padding-inner pt-2">
                     <a
                       href="#"
-                      class="back-button"
+                      className="back-button"
                       onClick={(e) => {
                         e.preventDefault();
                         settab("forgot-password");
@@ -239,27 +239,27 @@ const ForgetPassword = () => {
                     >
                       <img src="images/arrow-left.svg" />
                     </a>
-                    <div class="text-center">
+                    <div className="text-center">
                       <img
-                        class="img-fluid logo"
+                        className="img-fluid logo"
                         alt=""
                         src="images/logo.png"
                         width="145px"
                       />
                     </div>
                     <form
-                      class="login_margin"
+                      className="login_margin"
                       onSubmit={(e) => {
                         e.preventDefault();
                         verifyOtp();
                       }}
                     >
-                      <h3 class="mb-3 mb-md-3 page-title">OTP Verification</h3>
-                      <p class="text-left mb-3 mb-md-4">
+                      <h3 className="mb-3 mb-md-3 page-title">OTP Verification</h3>
+                      <p className="text-left mb-3 mb-md-4">
                         Check your Email, We’ve sent you PIN at Your Email.
                       </p>
-                      <div class="otp-field">
-                        <div class="group-input">
+                      <div className="otp-field">
+                        <div className="group-input">
                           <input
                             ref={otpBox[0]}
                             type="text"
@@ -273,7 +273,7 @@ const ForgetPassword = () => {
                             onKeyUp={(e) => otpkeydown(e, 0)}
                           />
                         </div>
-                        <div class="group-input">
+                        <div className="group-input">
                           <input
                             ref={otpBox[1]}
                             type="text"
@@ -287,7 +287,7 @@ const ForgetPassword = () => {
                             onKeyUp={(e) => otpkeydown(e, 1)}
                           />
                         </div>
-                        <div class="group-input">
+                        <div className="group-input">
                           <input
                             ref={otpBox[2]}
                             type="text"
@@ -301,7 +301,7 @@ const ForgetPassword = () => {
                             onKeyUp={(e) => otpkeydown(e, 2)}
                           />
                         </div>
-                        <div class="group-input">
+                        <div className="group-input">
                           <input
                             ref={otpBox[3]}
                             type="text"
@@ -316,15 +316,15 @@ const ForgetPassword = () => {
                           />
                         </div>
                       </div>
-                      <div class="btn_gred mt-4">
-                        <button type="submit" class="btn_admina">
+                      <div className="btn_gred mt-4">
+                        <button type="submit" className="btn_admina">
                           Verify
                         </button>
                       </div>
-                      <div class="text-center">
-                        <p class="mt-3">Didn’t you recevie any code?</p>
+                      <div className="text-center">
+                        <p className="mt-3">Didn’t you recevie any code?</p>
                         <button
-                          class="send_link"
+                          className="send_link"
                           onClick={() => {
                             sendotp();
                           }}
@@ -343,14 +343,14 @@ const ForgetPassword = () => {
 
       {tab == "change-password" && (
         <>
-          <div class="login-screen">
-            <div class="frame-parent min-screen p-0 ">
-              <div class="group-parent m-0">
-                <div class="group ">
-                  <div class="padding-inner pt-2">
+          <div className="login-screen">
+            <div className="frame-parent min-screen p-0 ">
+              <div className="group-parent m-0">
+                <div className="group ">
+                  <div className="padding-inner pt-2">
                     <a
                       href="#"
-                      class="back-button"
+                      className="back-button"
                       onClick={(e) => {
                         e.preventDefault();
                         settab("otp");
@@ -358,28 +358,28 @@ const ForgetPassword = () => {
                     >
                       <img src="images/arrow-left.svg" />
                     </a>
-                    <div class="text-center">
+                    <div className="text-center">
                       <img
-                        class="img-fluid logo"
+                        className="img-fluid logo"
                         alt=""
                         src="images/logo.png"
                         width="145px"
                       />
                     </div>
                     <form
-                      class="login_margin"
+                      className="login_margin"
                       onSubmit={(e) => {
                         e.preventDefault();
                         passwordSubmit();
                       }}
                     >
-                      <h3 class="mb-3 mb-md-3 page-title">
+                      <h3 className="mb-3 mb-md-3 page-title">
                         Create New Password
                       </h3>
-                      <p class="text-left mb-3 mb-md-4">
+                      <p className="text-left mb-3 mb-md-4">
                         Let’s Create New Password, And Start Your Sessions.
                       </p>
-                      <div class="group-input">
+                      <div className="group-input">
                         <svg
                           width="24"
                           height="24"
@@ -393,7 +393,7 @@ const ForgetPassword = () => {
                                 id="Vector 23"
                                 d="M12.0833 10.8333L16.1666 6.75M17.9166 5L16.1666 6.75M16.1666 6.75L19.0833 9.66667"
                                 stroke="#363853"
-                                stroke-width="1.5"
+                                strokeWidth="1.5"
                                 stroke-linecap="round"
                               />
                               <circle
@@ -402,7 +402,7 @@ const ForgetPassword = () => {
                                 cy="14.3334"
                                 r="4.66667"
                                 stroke="#363853"
-                                stroke-width="1.5"
+                                strokeWidth="1.5"
                               />
                             </g>
                           </g>
@@ -422,7 +422,7 @@ const ForgetPassword = () => {
                           }}
                         />
                         <div
-                          class="hide-show-icon"
+                          className="hide-show-icon"
                           onClick={() => {
                             setpasswordShow({
                               ...passwordShow,
@@ -439,7 +439,7 @@ const ForgetPassword = () => {
                           />
                         </div>
                       </div>
-                      <div class="group-input">
+                      <div className="group-input">
                         <svg
                           width="24"
                           height="24"
@@ -453,7 +453,7 @@ const ForgetPassword = () => {
                                 id="Vector 23"
                                 d="M12.0833 10.8333L16.1666 6.75M17.9166 5L16.1666 6.75M16.1666 6.75L19.0833 9.66667"
                                 stroke="#363853"
-                                stroke-width="1.5"
+                                strokeWidth="1.5"
                                 stroke-linecap="round"
                               />
                               <circle
@@ -462,7 +462,7 @@ const ForgetPassword = () => {
                                 cy="14.3334"
                                 r="4.66667"
                                 stroke="#363853"
-                                stroke-width="1.5"
+                                strokeWidth="1.5"
                               />
                             </g>
                           </g>
@@ -484,7 +484,7 @@ const ForgetPassword = () => {
                           }}
                         />
                         <div
-                          class="hide-show-icon"
+                          className="hide-show-icon"
                           onClick={() => {
                             setpasswordShow({
                               ...passwordShow,
@@ -505,8 +505,8 @@ const ForgetPassword = () => {
                         <p className="text-danger ps-3">{err?.password}</p>
                       )}
 
-                      <div class="btn_gred mt-4">
-                        <button type="submit" class="btn_admina">
+                      <div className="btn_gred mt-4">
+                        <button type="submit" className="btn_admina">
                           Confirm
                         </button>
                       </div>

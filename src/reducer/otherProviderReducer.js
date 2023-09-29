@@ -1,4 +1,4 @@
-import { otherProviderConstant, serviceConstant, userConstant } from "../action/constant";
+import { otherProviderConstant } from "../action/constant";
 
 const initialState = null
 

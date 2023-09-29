@@ -20,12 +20,12 @@ const SignUp = ({
   return (
     <>
       <div
-        class="tab-pane fade"
+        className="tab-pane fade"
         id="singup"
         role="tabpanel"
         aria-labelledby="singup-tab"
       >
-        <h3 class="mb-3">Welcome, Sign Up</h3>
+        <h3 className="mb-3">Welcome, Sign Up</h3>
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -55,7 +55,7 @@ const SignUp = ({
             }
           }}
         >
-          <div class="group-input mt-3">
+          <div className="group-input mt-3">
             <svg
               width="24"
               height="24"
@@ -78,7 +78,7 @@ const SignUp = ({
               }}
             />
           </div>
-          <div class="group-input mt-3">
+          <div className="group-input mt-3">
             <svg
               width="24"
               height="24"
@@ -91,21 +91,21 @@ const SignUp = ({
                   id="Vector"
                   d="M2.88539 8.84875C3.55805 6.13983 5.70602 4.04534 8.43056 3.44162L8.88443 3.34105C10.9366 2.88632 13.0634 2.88632 15.1156 3.34105L15.5694 3.44162C18.294 4.04534 20.442 6.13984 21.1146 8.84875C21.6285 10.9182 21.6285 13.0819 21.1146 15.1512C20.442 17.8602 18.294 19.9547 15.5694 20.5584L15.1156 20.659C13.0634 21.1137 10.9366 21.1137 8.88443 20.659L8.43056 20.5584C5.70601 19.9547 3.55805 17.8602 2.88539 15.1513C2.37154 13.0819 2.37154 10.9181 2.88539 8.84875Z"
                   stroke="#363853"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke-linecap="round"
                 />
                 <path
                   id="Vector_2"
                   d="M21.1146 15.1512C21.6285 13.0819 21.6285 10.9182 21.1146 8.84875C20.442 6.13984 18.294 4.04534 15.5694 3.44162L15.1156 3.34105C13.0634 2.88632 10.9366 2.88632 8.88443 3.34105L8.43056 3.44162C5.70602 4.04534 3.55805 6.13983 2.88539 8.84875C2.37154 10.9181 2.37154 13.0819 2.88539 15.1513C3.55805 17.8602 5.70601 19.9547 8.43056 20.5584L8.88443 20.659"
                   stroke="#363853"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke-linecap="round"
                 />
                 <path
                   id="Vector_3"
                   d="M8.15112 10.3501L10.7216 12.1866C11.4864 12.7329 12.5136 12.7329 13.2783 12.1866L15.8489 10.3501"
                   stroke="#363853"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke-linecap="round"
                 />
               </g>
@@ -123,7 +123,7 @@ const SignUp = ({
               }}
             />
           </div>
-          <div class="group-input mt-3">
+          <div className="group-input mt-3">
             <PhoneInput
               placeholder="Phone Number"
               enableSearch={true}
@@ -141,7 +141,7 @@ const SignUp = ({
           {err?.phone !== "" && (
             <p className="text-danger ps-3">{err?.phone}</p>
           )}
-          <div class="group-input mt-3">
+          <div className="group-input mt-3">
             <svg
               width="24"
               height="24"
@@ -205,7 +205,7 @@ const SignUp = ({
               }}
             />
           </div>
-          <div class="group-input mt-3">
+          <div className="group-input mt-3">
             <svg
               width="24"
               height="24"
@@ -219,7 +219,7 @@ const SignUp = ({
                     id="Vector 23"
                     d="M12.0833 10.8333L16.1666 6.75M17.9166 5L16.1666 6.75M16.1666 6.75L19.0833 9.66667"
                     stroke="#363853"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke-linecap="round"
                   />
                   <circle
@@ -228,7 +228,7 @@ const SignUp = ({
                     cy="14.3334"
                     r="4.66667"
                     stroke="#363853"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                   />
                 </g>
               </g>
@@ -243,7 +243,7 @@ const SignUp = ({
               placeholder="Enter your new password"
             />
             <div
-              class="hide-show-icon"
+              className="hide-show-icon"
               onClick={() => {
                 setpasswordShow({
                   ...passwordShow,
@@ -260,7 +260,7 @@ const SignUp = ({
               />
             </div>
           </div>
-          <div class="group-input mt-3">
+          <div className="group-input mt-3">
             <svg
               width="24"
               height="24"
@@ -274,7 +274,7 @@ const SignUp = ({
                     id="Vector 23"
                     d="M12.0833 10.8333L16.1666 6.75M17.9166 5L16.1666 6.75M16.1666 6.75L19.0833 9.66667"
                     stroke="#363853"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke-linecap="round"
                   />
                   <circle
@@ -283,7 +283,7 @@ const SignUp = ({
                     cy="14.3334"
                     r="4.66667"
                     stroke="#363853"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                   />
                 </g>
               </g>
@@ -301,7 +301,7 @@ const SignUp = ({
               placeholder="Re-enter your new password"
             />
             <div
-              class="hide-show-icon"
+              className="hide-show-icon"
               onClick={() => {
                 setpasswordShow({
                   ...passwordShow,
@@ -321,9 +321,9 @@ const SignUp = ({
           {err?.password !== "" && (
             <p className="text-danger ps-3">{err?.password}</p>
           )}
-          <h3 class="mb-3 mt-3">Are you a Provider?</h3>
-          <div class="d-flex">
-            <div class="me-4">
+          <h3 className="mb-3 mt-3">Are you a Provider?</h3>
+          <div className="d-flex">
+            <div className="me-4">
               <input
                 type="radio"
                 id="yes"
@@ -348,8 +348,8 @@ const SignUp = ({
               <label for="no">No</label>
             </div>
           </div>
-          <div class="btn_gred mt-3">
-            <button type="submit" class="btn_admina">
+          <div className="btn_gred mt-3">
+            <button type="submit" className="btn_admina">
               Continue
             </button>
           </div>

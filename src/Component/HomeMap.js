@@ -1,8 +1,19 @@
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
-import { Component, useEffect, useRef, useState } from "react";
+import React, { Component, useEffect, useRef, useState } from "react";
+import ReactDOM from "react-dom";
 import { GOOGLE_API_KEY } from "../Configration/configration";
 import { saveService } from "../action/userServiceConstant";
 import { useDispatch } from "react-redux";
+
+const InfoWindowEx = (props) => {
+  const infoWindowRef = React.createRef();
+  const contentElement = document.createElement(`div`);
+  useEffect(() => {
+    ReactDOM.render(React.Children.only(props.children), contentElement);
+    infoWindowRef.current.infowindow.setContent(contentElement);
+  }, [props.children]);
+  return <InfoWindow ref={infoWindowRef} {...props} />;
+};
 
 export const HomeMap = (props) => {
   const [Info, setInfo] = useState({
@@ -12,7 +23,7 @@ export const HomeMap = (props) => {
   });
 
   const onMarkerClick = (props, marker, e, data) => {
-    console.log(data)
+    console.log(data);
     setInfo({
       selectedPlace: data,
       activeMarker: marker,
@@ -38,13 +49,11 @@ export const HomeMap = (props) => {
     dispatch(saveService({ id: id, status: status }));
   };
 
-  const ref = useRef()
+  const ref = useRef();
 
   useEffect(() => {
-
     ref?.current?.addEventListener("click", () => console.log("click"));
-  },[])
-
+  }, []);
 
   return (
     <>
@@ -103,7 +112,7 @@ export const HomeMap = (props) => {
             )
           );
         })}
-        <InfoWindow
+        <InfoWindowEx
           marker={Info.activeMarker}
           visible={Info.showingInfoWindow}
           onClose={onClose}
@@ -114,7 +123,7 @@ export const HomeMap = (props) => {
             <div className="d-flex align-items-center justify-content-between">
               <div>
                 <div className="d-flex align-items-center">
-                  <div class="p_image_shape me-2 me-sm-2 p_image_shape_map">
+                  <div className="p_image_shape me-2 me-sm-2 p_image_shape_map">
                     <img src={Info?.selectedPlace?.user_profile_picture} />
                   </div>
                   <p className="map_name m-0 p-0">
@@ -122,7 +131,7 @@ export const HomeMap = (props) => {
                   </p>
                 </div>
                 <div className="d-flex align-items-center mt-1">
-                  <div class="me-2 me-sm-2 ms-1">
+                  <div className="me-2 me-sm-2 ms-1">
                     <img
                       src="images/mapDiscovery.svg"
                       style={{ width: "18px" }}
@@ -134,15 +143,75 @@ export const HomeMap = (props) => {
                 </div>
               </div>
               <div className="d-flex">
-                <div class="p_image_shape me-2 me-sm-2 p_image_map_icon d-flex align-items-center justify-content-center">
+                <div className="p_image_shape me-2 me-sm-2 p_image_map_icon d-flex align-items-center justify-content-center">
                   <img src="images/shareIcon.svg" />
                 </div>
                 <button
-                  class="p_image_shape me-2 me-sm-2 p_image_map_icon d-flex align-items-center justify-content-center"
+                  className="p_image_shape me-2 me-sm-2 p_image_map_icon d-flex align-items-center justify-content-center"
                   // ref={ref}
-                  style={{cursor : 'pointer'}}
+                  style={{ cursor: "pointer" }}
                   onClick={() => {
-                    console.log(Info)
+                    console.log(Info);
+                    if (Info?.selectedPlace?.is_save) {
+                      saveProvider(Info?.selectedPlace?._id, false);
+                    } else {
+                      saveProvider(Info?.selectedPlace?._id, true);
+                    }
+                    setInfo({...Info, selectedPlace : {...Info?.selectedPlace, is_save : !Info?.selectedPlace?.is_save}})
+                  }}
+                >
+                  <img
+                    src={
+                      Info?.selectedPlace?.is_save
+                        ? "images/save.svg"
+                        : "images/saveIcon.svg"
+                    }
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </InfoWindowEx>
+        {/* <InfoWindow
+          marker={Info.activeMarker}
+          visible={Info.showingInfoWindow}
+          onClose={onClose}
+        >
+          <div className="map-tooltip">
+            <h6 className="map_title">{Info?.selectedPlace?.service_name}</h6>
+
+            <div className="d-flex align-items-center justify-content-between">
+              <div>
+                <div className="d-flex align-items-center">
+                  <div className="p_image_shape me-2 me-sm-2 p_image_shape_map">
+                    <img src={Info?.selectedPlace?.user_profile_picture} />
+                  </div>
+                  <p className="map_name m-0 p-0">
+                    {Info?.selectedPlace?.user_id?.name}
+                  </p>
+                </div>
+                <div className="d-flex align-items-center mt-1">
+                  <div className="me-2 me-sm-2 ms-1">
+                    <img
+                      src="images/mapDiscovery.svg"
+                      style={{ width: "18px" }}
+                    />
+                  </div>
+                  <p className="map_des m-0 p-0">
+                    Approx. - {Info?.selectedPlace?.miles_distance} Mile
+                  </p>
+                </div>
+              </div>
+              <div className="d-flex">
+                <div className="p_image_shape me-2 me-sm-2 p_image_map_icon d-flex align-items-center justify-content-center">
+                  <img src="images/shareIcon.svg" />
+                </div>
+                <button
+                  className="p_image_shape me-2 me-sm-2 p_image_map_icon d-flex align-items-center justify-content-center"
+                  // ref={ref}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    console.log(Info);
                     if (Info?.is_save) {
                       saveProvider(Info?.selectedPlace?._id, false);
                     } else {
@@ -161,7 +230,7 @@ export const HomeMap = (props) => {
               </div>
             </div>
           </div>
-        </InfoWindow>
+        </InfoWindow> */}
       </Map>
     </>
   );
