@@ -19,9 +19,13 @@ export const loaderConstant = {
 export const userServiceConstant = {
   GET_USER_SERVICE: "GET_USER_SERVICE",
   FETCH_MORE_SERVICE: "FETCH_MORE_SERVICE",
-  SAVE_SERVICE : "SAVE_SERVICE",
+  SAVE_SERVICE: "SAVE_SERVICE",
 };
 
 export const otherProviderConstant = {
   GET_OTHER_PROVIDER_DETAILS: "GET_OTHER_PROVIDER_DETAILS",
+};
+
+export const myPageConstant = {
+  GET_MY_PAGE_DETAILS: "GET_MY_PAGE_DETAILS",
 };

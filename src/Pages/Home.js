@@ -130,10 +130,10 @@ const Home = () => {
 
   return (
     <>
-      <section class="main-page">
+      <section className="main-page">
         <Header />
-        <div class="main-inner p-0">
-          <div class="d-flex position-relative">
+        <div className="main-inner p-0">
+          <div className="d-flex position-relative">
             <div
               className="col-12 col-lg-8 position-relative"
               style={{ height: "calc(100vh - 153px)" }}
@@ -157,7 +157,7 @@ const Home = () => {
               <div className="row position-relative">
                 <div className="col-12 col-lg-8 row">
                   <div className="col-12 col-lg-6 p-3">
-                    <div class="group-input">
+                    <div className="group-input">
                       <PlacesAutocomplete
                         value={location}
                         onChange={(e) => {
@@ -195,12 +195,12 @@ const Home = () => {
                               <path
                                 d="M20 11.1755C20 15.6907 16.4183 21 12 21C7.58172 21 4 15.6907 4 11.1755C4 6.66029 7.58172 3 12 3C16.4183 3 20 6.66029 20 11.1755Z"
                                 stroke="#363853"
-                                stroke-width="1.5"
+                                strokeWidth="1.5"
                               />
                               <path
                                 d="M9.5 10.5C9.5 9.11929 10.6193 8 12 8C13.3807 8 14.5 9.11929 14.5 10.5C14.5 11.8807 13.3807 13 12 13C10.6193 13 9.5 11.8807 9.5 10.5Z"
                                 stroke="#363853"
-                                stroke-width="1.5"
+                                strokeWidth="1.5"
                               />
                             </svg>
                             <input
@@ -247,28 +247,28 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="col-12 col-lg-6 p-3">
-                    <div class="position-relative">
-                      <div class="group-input">
+                    <div className="position-relative">
+                      <div className="group-input">
                         <input
                           type="text"
                           name=""
                           placeholder="Select Discription Name"
-                          class="select-servcesss map-select"
+                          className="select-servcesss map-select"
                           onClick={() => {
                             setserviceOpen(!serviceOpen);
                           }}
                         />
                       </div>
                       <div
-                        class={serviceOpen ? "list-open open" : "list-open"}
+                        className={serviceOpen ? "list-open open" : "list-open"}
                         style={{ scrollBehavior: "smooth" }}
                       >
                         {serviceList?.map((data) => {
                           return (
                             <>
-                              <div class="group-input-check position-relative my-2">
-                                <div class="">
-                                  <label class="gred-checkbox">
+                              <div className="group-input-check position-relative my-2">
+                                <div className="">
+                                  <label className="gred-checkbox">
                                     {data?.description_name}
                                     <input
                                       type="checkbox"
@@ -308,10 +308,10 @@ const Home = () => {
                                         }
                                       }}
                                     />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
-                                {/* <h4 class="float-end">
+                                {/* <h4 className="float-end">
                               {data?.admin_service_amount}
                             </h4> */}
                               </div>
@@ -349,22 +349,22 @@ const Home = () => {
                               to={`/provider_details/${data?.user_id?._id}`}
                             >
                               <div
-                                class="border-gred mb-0 p-0"
+                                className="border-gred mb-0 p-0"
                                 style={{ border: "1px solid #D0DEE2" }}
                               >
-                                <div class="inner-gred d-flex align-items-center p-3">
-                                  <div class="p_image_shape me-2 me-sm-3">
+                                <div className="inner-gred d-flex align-items-center p-3">
+                                  <div className="p_image_shape me-2 me-sm-3">
                                     <img src={data?.banner_image} />
                                   </div>
                                   <div className="w-100">
                                     <h4
-                                      class="mb-1"
+                                      className="mb-1"
                                       style={{ fontSize: "18px" }}
                                     >
                                       {data?.service_name}
                                     </h4>
                                     <p
-                                      class="mb-0"
+                                      className="mb-0"
                                       style={{ fontSize: "12px" }}
                                     >
                                       {data?.description}
@@ -407,7 +407,7 @@ const Home = () => {
                                         {data?.user_id?.name}
                                       </h5>
                                       <div className="d-flex align-items-center">
-                                        <div class="me-2 me-sm-2">
+                                        <div className="me-2 me-sm-2">
                                           <img
                                             src="images/mapDiscovery.svg"
                                             style={{ width: "18px" }}

@@ -26,5 +26,5 @@ export const URL_PATH = {
   check_mail: "/user/check_email",
   home_service_list: '/my_page/home_service_list',
   save_service: '/my_page/save_unsave_service',
-  other_provider_details : ""
+  get_my_page_details : "/my_page/get_my_page"
 };

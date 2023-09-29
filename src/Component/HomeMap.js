@@ -123,7 +123,7 @@ export const HomeMap = (props) => {
             <div className="d-flex align-items-center justify-content-between">
               <div>
                 <div className="d-flex align-items-center">
-                  <div class="p_image_shape me-2 me-sm-2 p_image_shape_map">
+                  <div className="p_image_shape me-2 me-sm-2 p_image_shape_map">
                     <img src={Info?.selectedPlace?.user_profile_picture} />
                   </div>
                   <p className="map_name m-0 p-0">
@@ -131,7 +131,7 @@ export const HomeMap = (props) => {
                   </p>
                 </div>
                 <div className="d-flex align-items-center mt-1">
-                  <div class="me-2 me-sm-2 ms-1">
+                  <div className="me-2 me-sm-2 ms-1">
                     <img
                       src="images/mapDiscovery.svg"
                       style={{ width: "18px" }}
@@ -143,11 +143,11 @@ export const HomeMap = (props) => {
                 </div>
               </div>
               <div className="d-flex">
-                <div class="p_image_shape me-2 me-sm-2 p_image_map_icon d-flex align-items-center justify-content-center">
+                <div className="p_image_shape me-2 me-sm-2 p_image_map_icon d-flex align-items-center justify-content-center">
                   <img src="images/shareIcon.svg" />
                 </div>
                 <button
-                  class="p_image_shape me-2 me-sm-2 p_image_map_icon d-flex align-items-center justify-content-center"
+                  className="p_image_shape me-2 me-sm-2 p_image_map_icon d-flex align-items-center justify-content-center"
                   // ref={ref}
                   style={{ cursor: "pointer" }}
                   onClick={() => {
@@ -183,7 +183,7 @@ export const HomeMap = (props) => {
             <div className="d-flex align-items-center justify-content-between">
               <div>
                 <div className="d-flex align-items-center">
-                  <div class="p_image_shape me-2 me-sm-2 p_image_shape_map">
+                  <div className="p_image_shape me-2 me-sm-2 p_image_shape_map">
                     <img src={Info?.selectedPlace?.user_profile_picture} />
                   </div>
                   <p className="map_name m-0 p-0">
@@ -191,7 +191,7 @@ export const HomeMap = (props) => {
                   </p>
                 </div>
                 <div className="d-flex align-items-center mt-1">
-                  <div class="me-2 me-sm-2 ms-1">
+                  <div className="me-2 me-sm-2 ms-1">
                     <img
                       src="images/mapDiscovery.svg"
                       style={{ width: "18px" }}
@@ -203,11 +203,11 @@ export const HomeMap = (props) => {
                 </div>
               </div>
               <div className="d-flex">
-                <div class="p_image_shape me-2 me-sm-2 p_image_map_icon d-flex align-items-center justify-content-center">
+                <div className="p_image_shape me-2 me-sm-2 p_image_map_icon d-flex align-items-center justify-content-center">
                   <img src="images/shareIcon.svg" />
                 </div>
                 <button
-                  class="p_image_shape me-2 me-sm-2 p_image_map_icon d-flex align-items-center justify-content-center"
+                  className="p_image_shape me-2 me-sm-2 p_image_map_icon d-flex align-items-center justify-content-center"
                   // ref={ref}
                   style={{ cursor: "pointer" }}
                   onClick={() => {

@@ -23,6 +23,7 @@ function App() {
   return (
     <>
       {authDetails !== null && authDetails?.token ? (
+        //after login route
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<UserProfile />} />

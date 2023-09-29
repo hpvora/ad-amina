@@ -104,9 +104,9 @@ const ProviderDetailsPage = () => {
         <>
             {loader && (
                 <>
-                    <div class="preloader">
+                    <div className="preloader">
                         <svg
-                            class="loader-svg"
+                            className="loader-svg"
                             width="150"
                             height="150"
                             viewBox="-0.1 -0.1 1.2 1.2"
@@ -118,7 +118,7 @@ const ProviderDetailsPage = () => {
                                 </linearGradient>
                             </defs>
                             <path
-                                class="hexagon background"
+                                className="hexagon background"
                                 d="M0.4625 0.01165063509
       a0.075 0.075 0 0 1 0.075 0
       l0.3666729559 0.2116987298
@@ -135,7 +135,7 @@ const ProviderDetailsPage = () => {
                             />
                             <path
                                 id="trace"
-                                class="hexagon trace"
+                                className="hexagon trace"
                                 d="M0.4625 0.01165063509
       a0.075 0.075 0 0 1 0.075 0
       l0.3666729559 0.2116987298
@@ -154,27 +154,27 @@ const ProviderDetailsPage = () => {
                 </>
             )}
 
-            <section class="main-page">
+            <section className="main-page">
                 <Header/>
 
-                <div class="main-inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-lg-6 col-xl-6">
-                                <div class="border-gred">
-                                    <div class="inner-gred d-flex align-items-center">
-                                        <div class="p_image_shape me-2 me-sm-3">
+                <div className="main-inner">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12 col-lg-6 col-xl-6">
+                                <div className="border-gred">
+                                    <div className="inner-gred d-flex align-items-center">
+                                        <div className="p_image_shape me-2 me-sm-3">
                                             {userDetails?.is_verified && (
                                                 <>
-                                                    <img src="images/check.svg" class="blue_check"/>
+                                                    <img src="images/check.svg" className="blue_check"/>
                                                 </>
                                             )}
 
                                             <img src={userDetails?.profile_picture}/>
                                         </div>
                                         <div className="w-100">
-                                            <h4 class="mb-1">{userDetails?.name}</h4>
-                                            <p class="mb-1">
+                                            <h4 className="mb-1">{userDetails?.name}</h4>
+                                            <p className="mb-1">
                                                 {userDetails?.is_ambassador && (
                                                     <img
                                                         src="/images/ambassador.svg"
@@ -186,7 +186,7 @@ const ProviderDetailsPage = () => {
                                             </p>
                                             <div className="d-flex justify-content-between align-items-center mt-1">
                                                 <div className="d-flex align-items-center">
-                                                    <div class="me-2 me-sm-2">
+                                                    <div className="me-2 me-sm-2">
                                                         <img
                                                             src={MapDiscoveryIcon}
                                                             style={{width: "18px"}}
@@ -234,11 +234,11 @@ const ProviderDetailsPage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-6 col-xl-6">
-                                <div class="border-gred">
-                                    <div class="inner-gred d-flex ">
+                            <div className="col-12 col-lg-6 col-xl-6">
+                                <div className="border-gred">
+                                    <div className="inner-gred d-flex ">
                                         <div>
-                                            <h4 class="mb-1">Description</h4>
+                                            <h4 className="mb-1">Description</h4>
                                             <div className="selected_services">
                                                 {userDetails?.provider_services?.map((data) => {
                                                     return (
@@ -260,18 +260,18 @@ const ProviderDetailsPage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-6 col-xl-6">
-                                <div class="border-gred">
-                                    <div class="inner-gred">
-                                        <h4 class="dec_title">About</h4>
-                                        <p class="about-desc">
+                            <div className="col-12 col-lg-6 col-xl-6">
+                                <div className="border-gred">
+                                    <div className="inner-gred">
+                                        <h4 className="dec_title">About</h4>
+                                        <p className="about-desc">
                                             {userDetails?.provider_introduction}
                                         </p>
                                     </div>
                                 </div>
-                                <div class="border-gred">
-                                    <div class="inner-gred">
-                                        <h4 class="dec_title d-flex justify-content-between">
+                                <div className="border-gred">
+                                    <div className="inner-gred">
+                                        <h4 className="dec_title d-flex justify-content-between">
                                             Review{" "}
                                             <p
                                                 className="map_des m-0 p-0"
@@ -323,11 +323,11 @@ const ProviderDetailsPage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-6 col-xl-6 align-self-center text-center text-lg-end">
-                                <div class="round-image">
-                                    <div class="first d-flex justify-content-center">
-                                        <div class="polygon-imgae">
-                                            <div class="p_image_shape">
+                            <div className="col-12 col-lg-6 col-xl-6 align-self-center text-center text-lg-end">
+                                <div className="round-image">
+                                    <div className="first d-flex justify-content-center">
+                                        <div className="polygon-imgae">
+                                            <div className="p_image_shape">
                                                 <img
                                                     src={
                                                         userDetails?.provider_banner_images[0]?.file_name
@@ -338,8 +338,8 @@ const ProviderDetailsPage = () => {
                                                 />
                                             </div>
                                         </div>
-                                        <div class="polygon-imgae">
-                                            <div class="p_image_shape">
+                                        <div className="polygon-imgae">
+                                            <div className="p_image_shape">
                                                 <img
                                                     src={
                                                         userDetails?.provider_banner_images[1]?.file_name
@@ -351,9 +351,9 @@ const ProviderDetailsPage = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="first d-flex justify-content-center">
-                                        <div class="polygon-imgae">
-                                            <div class="p_image_shape">
+                                    <div className="first d-flex justify-content-center">
+                                        <div className="polygon-imgae">
+                                            <div className="p_image_shape">
                                                 <img
                                                     src={
                                                         userDetails?.provider_banner_images[2]?.file_name
@@ -364,8 +364,8 @@ const ProviderDetailsPage = () => {
                                                 />
                                             </div>
                                         </div>
-                                        <div class="polygon-imgae">
-                                            <div class="p_image_shape">
+                                        <div className="polygon-imgae">
+                                            <div className="p_image_shape">
                                                 <img
                                                     src={
                                                         userDetails?.provider_banner_images[3]?.file_name
@@ -376,8 +376,8 @@ const ProviderDetailsPage = () => {
                                                 />
                                             </div>
                                         </div>
-                                        <div class="polygon-imgae">
-                                            <div class="p_image_shape">
+                                        <div className="polygon-imgae">
+                                            <div className="p_image_shape">
                                                 <img
                                                     src={
                                                         userDetails?.provider_banner_images[4]?.file_name
@@ -389,9 +389,9 @@ const ProviderDetailsPage = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="first d-flex justify-content-center">
-                                        <div class="polygon-imgae">
-                                            <div class="p_image_shape">
+                                    <div className="first d-flex justify-content-center">
+                                        <div className="polygon-imgae">
+                                            <div className="p_image_shape">
                                                 <img
                                                     src={
                                                         userDetails?.provider_banner_images[5]?.file_name
@@ -402,8 +402,8 @@ const ProviderDetailsPage = () => {
                                                 />
                                             </div>
                                         </div>
-                                        <div class="polygon-imgae">
-                                            <div class="p_image_shape">
+                                        <div className="polygon-imgae">
+                                            <div className="p_image_shape">
                                                 <img
                                                     src={
                                                         userDetails?.provider_banner_images[6]?.file_name

@@ -5,7 +5,8 @@ import userData from "./userReducer";
 import serviceData from "./serviceReducer";
 import loaderData from "./loaderReducer";
 import userServiceList from "./userServiceReducer";
-import otherProviderDetails from "./otherProviderReducer"
+import otherProviderDetails from "./otherProviderReducer";
+import myPageDetails from './myPageReducer'
 
 const rootReducer = combineReducers({
   auth: authData,
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
   service: serviceData,
   loader: loaderData,
   userServiceList : userServiceList,
-  otherProviderDetails : otherProviderDetails
+  otherProviderDetails : otherProviderDetails,
+  myPageDetails : myPageDetails
 });
 
 export default rootReducer;
